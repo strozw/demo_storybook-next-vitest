@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitest/config';
-import { storybookTest } from '@storybook/experimental-addon-test/vitest-plugin';
-import { storybookNextJsPlugin } from '@storybook/experimental-nextjs-vite/vite-plugin';
+import { storybookTest } from "@storybook/experimental-addon-test/vitest-plugin";
+import { storybookNextJsPlugin } from "@storybook/experimental-nextjs-vite/vite-plugin";
+import { defineConfig } from "vitest/config";
 
 // More info at: https://storybook.js.org/docs/writing-tests/vitest-plugin
 export default defineConfig({
@@ -11,15 +11,16 @@ export default defineConfig({
     storybookNextJsPlugin(),
   ],
   test: {
-    name: 'storybook',
+    name: "storybook",
     browser: {
-      enabled: true,
+      enabled: false,
       headless: true,
-      name: 'chromium',
-      provider: 'playwright',
+      name: "chromium",
+      provider: "playwright",
     },
+    environment: "jsdom",
     // Make sure to adjust this pattern to match your stories files.
-    include: ['**/*.stories.?(m)[jt]s?(x)'],
-    setupFiles: ['./.storybook/vitest.setup.ts'],
+    include: ["**/*.stories.?(m)[jt]s?(x)"],
+    setupFiles: ["./.storybook/vitest.setup.ts"],
   },
 });
