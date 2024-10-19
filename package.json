@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest run"
   },
   "dependencies": {
     "next": "14.2.15",
@@ -32,6 +33,8 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitest/browser": "^2.1.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
     "happy-dom": "^15.7.4",
     "jsdom": "^25.0.1",
     "playwright": "^1.48.1",
