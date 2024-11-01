@@ -10,6 +10,9 @@ import NextHeader from "./Header";
 
 export default {
   component: NextHeader,
+  parameters: {
+    react: { rsc: true },
+  },
 } as Meta<typeof NextHeader>;
 
 type Story = StoryObj<typeof NextHeader>;
