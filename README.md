@@ -1,4 +1,4 @@
-# Demo App for Next.js with Storybook
+# Demo App for Next.js with Storybook with Experimental Addon Vitest
 
 ## Setup
 
